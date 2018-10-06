@@ -38,13 +38,13 @@ export default class Categories extends Component {
         {categories.map((category) => {
           return (<li key={category.id}>
             {category.name}
-            <button onClick={this.setCategory.bind(this, category.id)}>選択</button>
-            <button onClick={this.removeCategory.bind(this, category)}>削除</button>
+            <button className="btn" onClick={this.setCategory.bind(this, category.id)}>選択</button>
+            <button className="btn" onClick={this.removeCategory.bind(this, category)}>削除</button>
             </li>);
         })}
         <li>
           <input type="text" onInput={this.onInput.bind(this)}/>
-          <button onClick={this.addCategory.bind(this)}>追加</button>
+          <button className="btn" onClick={this.addCategory.bind(this)}>追加</button>
         </li>
       </ul>
     </div>)

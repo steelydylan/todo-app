@@ -37,18 +37,22 @@ class App extends React.Component {
     const todos = this.getTodos();
     const categoryName = this.getCategoryName();
 
-    return (<div>
+    return (<div className="app">
+      <div className="side">
       <Categories categories={categories} 
         addCategory={actions.addCategory} 
         removeCategory={actions.removeCategory}
         setCategory={actions.setCategory}
       />
+      </div>
+      <div className="main">
       <p>選択中のカテゴリー 「{categoryName}」</p>
       <Todos todos={todos} 
         addTodo={actions.addTodo} 
         removeTodo={actions.removeTodo}
         selectedCategory={selectedCategory}
       />
+      </div>
     </div>
     );
   }
