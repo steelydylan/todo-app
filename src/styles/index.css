@@ -1,6 +1,7 @@
 .test {
-    background-color: red;
-    color: #FFF;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    color: #333;
 }
 
 .app {
